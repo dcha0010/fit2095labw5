@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            table,th,td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/">Return home</a> <br>
+        <table>
+            <tr>
+                <th>Task name</th>
+                <th>Task date</th>
+                <th>Description</th>
+            </tr>
+            <% for (let i=0;i<database.length;i++){ %>
+            <tr>
+                <td>
+                    <%= database[i].name %>
+                </td>
+                <td>
+                    <%= database[i].date %>
+                </td>
+                <td>
+                    <%= database[i].desc %>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
